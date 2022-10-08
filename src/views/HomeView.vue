@@ -29,6 +29,16 @@ export default {
         clima(){
             return this.$store.state.clima
         }
+    },
+    methods:{
+        pegarBg(){
+            const body = document.querySelector("body")
+        
+            body.style.backgroundImage = `url("https://source.unsplash.com/${screen.width}x${screen.height}/?wather")`
+        }
+    },
+    mounted(){
+        this.pegarBg()
     }
    
 }
