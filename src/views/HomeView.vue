@@ -4,7 +4,7 @@
             <div class="card text-white rounded-4 ">
                 <div class="card-body bg-esmeralda rounded-4 px-5">
                     <h4 class="card-title text-center">
-                        Confira o clima de uma cidade
+                        Confira o clima de qualquer cidade
                     </h4>
                     <ClimaForm></ClimaForm>
                     <div class="alert alert-danger text-center" v-if="$store.state.clima.error" role="alert">
