@@ -3,6 +3,7 @@
         <div class="row mt-3 mb-3">
             <div class="col-12">
                 <div class="input-group mb-3">
+                    {{}}
                     <input type="text" class="form-control" v-model="form.cidade" placeholder="Digite o nome da cidade" aria-label="Digite o nome da cidade" aria-describedby="button-addon2">
                     <button class="btn btn-verde-escuro" type="submit" id="button-addon2" :disabled="form.cidade == '' || $store.state.clima.is_loading">
                         
@@ -29,7 +30,7 @@ export default {
     methods:{
         ...mapActions(["getClima"]),
         gerarClima(){
-            this.getClima(this.form.cidade)
+            this.getClima(this.form.cidade.trim())
         }
     }
 }
